@@ -1,0 +1,16 @@
+{
+  "name": "smg-stock-chart",
+  "version": "0.0.1",
+  "description": "Stocks chartting APP for FCC by SMG",
+  "main": "server.js",
+  "author": "Sergio Gaspar <sergiomgaspar.dev@gmail.com>",
+  "dependencies": {
+    "async": "~0.2.8",
+    "express": "~3.2.4",
+    "jquery": "^3.1.0",
+    "socket.io": "^1.0"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}

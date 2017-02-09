@@ -1,0 +1,65 @@
+.stock-0 {
+  background-color: #0092C2; }
+
+.line-0 {
+  stroke: #0092C2; }
+
+.stock-1 {
+  background-color: #88CADD; }
+
+.line-1 {
+  stroke: #88CADD; }
+
+.stock-2 {
+  background-color: #DDE9EC; }
+
+.line-2 {
+  stroke: #DDE9EC; }
+
+.stock-3 {
+  background-color: #FDE2DB; }
+
+.line-3 {
+  stroke: #FDE2DB; }
+
+.stock-4 {
+  background-color: #F7A396; }
+
+.line-4 {
+  stroke: #F7A396; }
+
+.stock-5 {
+  background-color: #F15D51; }
+
+.line-5 {
+  stroke: #F15D51; }
+
+.stock-6 {
+  background-color: #D81F26; }
+
+.line-6 {
+  stroke: #D81F26; }
+
+.stockBox {
+  border: 1px solid;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px; }
+  .stockBox:hover {
+    border-color: white; }
+
+.form-inline {
+  margin-bottom: 10px; }
+
+.jumbotron {
+  text-align: center;
+  background-color: grey; }
+
+.glyphicon-remove {
+  float: right;
+  border: 1px solid; }
+
+body {
+  background-color: lightgrey; }
+
+/*# sourceMappingURL=styles.css.map */
