@@ -1,0 +1,37 @@
+<div class="container">
+		<div class="container well">
+			<highchart id="chart1" config="chartConfig"></highchart>
+		</div>
+
+	<div class="container well text-center" style="background-color: #ecf0f1">
+		<form class="form-inline text-center" name="addStockForm">
+			<div class="form-group">
+				<input type="text" class="form-control" id="stockInput" placeholder="Enter stock name" ng-model="addstock">
+			</div>
+			<button type="submit" 
+                class="btn btn-default btn-primary"
+                ng-show="addstock.length > 0" 
+                ng-click="addStock(addstock)">Add</button>
+
+            <button type="submit" 
+                class="btn btn-danger btn-primary" 
+                ng-show="selectedRow > -1"
+                ng-click="removeStock(selectedStock)">Remove {{selectedStock}}</button>
+		</form>
+	
+        <table class="table">
+            <thead id="itemTitle">
+                <tr>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="itemBody">
+                <tr ng-repeat="stock in stockList"
+                    ng-class="{active:$index==selectedRow}"
+					ng-click="rowSelected($index)"
+                    ng-animate="'animate'" >
+                    <td id="itemName">{{stock}}</td>
+                </tr>
+        </table>
+    </div>
+</div>

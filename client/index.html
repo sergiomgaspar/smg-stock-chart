@@ -1,38 +1,53 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Stock Charts for FCC - by SMG</title>
+<html lang="en" ng-app="stocksChartApp" ng-controller="stocksController">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>    
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js"></script> 
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://code.highcharts.com/stock/highstock.src.js"></script>
+		<script src="/js/highcharts-ng.js"></script>
+		<link rel="stylesheet" type="text/css" href="/css/smg-stock-chart.css">
+		<script src="/js/socket.io.js"></script>
+		<script src="/js/app.js"></script>
+	</head>
+	<body>
 
-        <!-- TODO: Replace by CDN -->
-        <script src="js/react.min.js"></script>
-        <script src="js/react-dom.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
-        <script src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/moment-with-locales.min.js"></script> 
-        <script type="text/javascript" src="js/ajax.js"></script>
-		<script src="/socket.io/socket.io.js"></script>
-        <script type="text/javascript" src="js/chartist.js"></script>
-		
-        <!-- Custom scripts -->
-		<script type="text/javascript" src="js/main.js"></script>
-        <script src="js/react.jsx" type="text/babel"></script>
-		
-        <!-- CSS Stylesheets -->
-		<link rel="stylesheet" href="css/chartist.min.css">
-		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />
-        <link rel="stylesheet" href="css/styles.css" type="text/css" />
-
-    </head>
-    <body>
-        <div class='jumbotron'>
-            <h2>Chart the Stocks</h2>
-        </div>
-        <div class='container'>
-            <div class='ct-chart ct-major-tenth'></div>
-            
-            <div id="container">
-                
+        <!-- Top Header -->
+        <header class="hero-unit" id="banner">
+            <div class="container" id = "mainContainer">
+                <img class="img-responsive" id = "fcc-logo" src="assets/images/fcc.png" alt="FCC"> 
+                <h1>Chart the Stock Market</h1>
             </div>
-        </div>
-    </body>
+        </header>
+
+        <!-- The "main" angular div -->
+		<div class="container" ng-view>
+		</div>
+
+        <!-- Common footer to my projects -->
+		<footer>
+			<div class="container">
+				<script src="https://use.fontawesome.com/c51cc08ec6.js"></script>
+				<div class="container-fluid text-center">
+					<div class="footer-text text-muted row">
+						Created by Sérgio Gaspar for freeCodeCamp Challenge:
+						<a href="https://www.freecodecamp.com/challenges/chart-the-stock-market" target="_blank">Chart the Stock Market</a>.
+					</div>
+					<div class="social-icons">
+						<h2><a href="https://github.com/sergiomgaspar" target="_blank"  ><i id="github" class="fa fa-github" aria-hidden="true"></i></a>
+							<a href="http://codepen.io/sergiomgaspar/" target="_blank"><i id="codepen" class="fa fa-codepen" aria-hidden="true"></i></a>
+							<a href="https://www.freecodecamp.com/sergiomgaspar" target="_blank"><i id="freecodecamp" class="fa fa-free-code-camp" aria-hidden="true"></i></a>
+							<a href="https://www.linkedin.com/in/sergiomgaspar" target="_blank"><i id="linkedin" class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+							<a href="https://twitter.com/sergiomgaspar" target="_blank"><i id="twitter" class="fa fa-twitter" aria-hidden="true"></i></a>
+						</h2>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
 </html>
